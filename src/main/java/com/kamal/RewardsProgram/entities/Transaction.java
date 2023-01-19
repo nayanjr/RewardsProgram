@@ -1,20 +1,17 @@
 package com.kamal.RewardsProgram.entities;
 
-
-
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
+
 
 import java.time.LocalDate;
-
 @Entity
 public class Transaction {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private LocalDate date;
+
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
@@ -23,6 +20,7 @@ public class Transaction {
 
     public Transaction() {
     }
+
     public int calculateRewardPoints() {
         int intAmount = (int) amount;
 
@@ -34,6 +32,8 @@ public class Transaction {
 
         return 50 + ((intAmount - 100) * 2);
     }
+
+    // Getters and Setters
     public long getId() {
         return id;
     }
@@ -62,3 +62,5 @@ public class Transaction {
         this.amount = amount;
     }
 }
+
+

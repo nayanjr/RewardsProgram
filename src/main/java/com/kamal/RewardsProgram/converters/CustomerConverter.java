@@ -3,12 +3,9 @@ package com.kamal.RewardsProgram.converters;
 import com.kamal.RewardsProgram.dto.CustomerRewardsDto;
 import com.kamal.RewardsProgram.entities.Customer;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Component;
-
 import java.time.YearMonth;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import static java.util.stream.Collectors.*;
 
 @Component

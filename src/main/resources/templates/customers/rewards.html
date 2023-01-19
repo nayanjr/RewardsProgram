@@ -23,24 +23,24 @@
         No customer rewards
     </div>
     <div th:if="${!customerRewardsList.isEmpty()}">
-            <div th:each="customerRewards, iterStat : ${customerRewardsList}">
-                <div class="row rp-customer-summary">
-                    <div class="col-md-5">
-                        <span th:text="${customerRewards.customerDisplayName}">Customer</span>
-                    </div>
-                    <div class="col-md-3">
-                        Total Rewards:
-                        <span th:text="${customerRewards.totalRewards}">Customer</span>
-                    </div>
-                    <div class="col">
-                        <a class="btn rp-btn-primary" data-toggle="collapse" th:href="'#monthlyrewards' + ${iterStat.count}"
-                           role="button" aria-expanded="false" th:aria-controls="'monthlyrewards' + ${iterStat.count}">
-                            Display Monthly Rewards
-                        </a>
-                    </div>
+        <div th:each="customerRewards, iterStat : ${customerRewardsList}">
+            <div class="row rp-customer-summary">
+                <div class="col-md-5">
+                    <span th:text="${customerRewards.customerDisplayName}">Customer</span>
                 </div>
+                <div class="col-md-3">
+                    Total Rewards:
+                    <span th:text="${customerRewards.totalRewards}">Customer</span>
+                </div>
+                <div class="col">
+                    <a class="btn rp-btn-primary" data-toggle="collapse" th:href="'#monthlyrewards' + ${iterStat.count}"
+                       role="button" aria-expanded="false" th:aria-controls="'monthlyrewards' + ${iterStat.count}">
+                        Display Monthly Rewards
+                    </a>
+                </div>
+            </div>
 
-                <div class="collapse rp-monthly-rewards-margin" th:id="'monthlyrewards' + ${iterStat.count}">
+            <div class="collapse rp-monthly-rewards-margin" th:id="'monthlyrewards' + ${iterStat.count}">
                 <div th:if="${customerRewards.monthlyRewards.isEmpty()}" class="rp-empty-table-text">
                     No rewards for this customer.
                 </div>
@@ -53,18 +53,18 @@
                         </tr>
                         </thead>
                         <tbody class="rp-tbody">
-                        <tr th:each="monthlyReward : ${customerRewards.monthlyRewards}">
-                            <td th:text="${#temporals.format(monthlyReward.getKey, 'MMMM yyyy')}">Year-Month</td>
-                            <td th:text="${monthlyReward.getValue}">Monthly Rewards</td>
-                        </tr>
+<!--                        <tr th:each="monthlyReward : ${customerRewards.monthlyRewards}">-->
+<!--                            <td th:text="${#temporals.format(monthlyReward.getKey, 'MMMM yyyy')}">Year-Month</td>-->
+<!--                            <td th:text="${monthlyReward.getValue}">Monthly Rewards</td>-->
+<!--                        </tr>-->
                         </tbody>
                     </table>
                 </div>
-                </div>
-
-
             </div>
-            </tbody>
+
+
+        </div>
+        </tbody>
         </table>
     </div>
 </div>

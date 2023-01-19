@@ -1,11 +1,14 @@
 package com.kamal.RewardsProgram.entities;
 
+
 import jakarta.persistence.*;
 
-import java.util.List;
 
+import java.util.List;
+@Entity
 public class Customer {
-    @Id
+
+   @Id
     private long id;
 
     private String firstName;
@@ -21,7 +24,6 @@ public class Customer {
     public String getDisplayName() {
         return lastName + ", " + firstName + " (Customer Number: " + id + ")";
     }
-
 
     public long getId() {
         return id;
@@ -51,3 +53,4 @@ public class Customer {
         this.transactions = transactions;
     }
 }
+
