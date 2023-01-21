@@ -1,10 +1,9 @@
-:root {
-    /* Color Theme Swatches */
-    --wfColors-darkBlue: #103F66;
-    --wfColors-medBlue: #185F99;
-    --wfColors-lightBlue: #497EAA;
-    --wfColors-offWhite: #ebeaf8;
+
+
+*{
+
 }
+
 
 html {
     height: 100%;
@@ -16,13 +15,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
-    background-color: whitesmoke;
+    background-color: smokegrey;
 }
 
 h1,
 h2,
 h3 {
-    color: var(--wfColors-darkBlue);
+    color: rgb(15, 59, 148);
     margin-bottom: 1rem;
     line-height: 1.1;
 }
@@ -43,6 +42,17 @@ h1 {
 
 }
 
+.container {
+
+    margin-top: 2rem;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+
+}
+
 
 .rp-customer-summary {
     margin-top: 2rem;
@@ -56,12 +66,20 @@ h1 {
     margin-right: 5rem;
 }
 
-.header{
-margin-bottom: 16px;
+/*.header{
+    height: 70px;
+    display: flex;
+    padding: 20px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}*/
+
+.section{
+    display:flex;
+    flex-direction: column;
 }
 
 .table .rp-thead th {
-    color: var(--wfColors-medBlue);
+    color: rgb(15, 59, 148);
     font-size: 1.2rem;
 }
 
@@ -72,14 +90,14 @@ margin-bottom: 16px;
 .rp-btn-primary {
     color: #fff;
     font-size: .8rem;
-    background-color: var(--wfColors-medBlue);
-    border-color: var(--wfColors-medBlue);
+    background-color: rgb(15, 59, 148);
+    border-color: rgb(15, 59, 148);
 }
 
 .rp-btn-primary:hover {
     color: #fff;
-    background-color: var(--wfColors-darkBlue);
-    border-color: var(--wfColors-darkBlue);
+    background-color: rgb(15, 59, 148);
+    border-color: rgb(15, 59, 148);
 }
 
 @media screen and (min-width: 1024px) {

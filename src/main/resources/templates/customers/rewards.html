@@ -15,7 +15,7 @@
     <title>Customer Rewards</title>
 </head>
 
-<body>
+<body class="section">
 
 <div class="container">
     <h1 class = "header">Customer Rewards</h1>
@@ -42,7 +42,7 @@
 
             <div class="collapse rp-monthly-rewards-margin" th:id="'monthlyrewards' + ${iterStat.count}">
                 <div th:if="${customerRewards.monthlyRewards.isEmpty()}" class="rp-empty-table-text">
-                    No rewards for this customer.
+                    Customer has no rewards.
                 </div>
                 <div th:if="${!customerRewards.monthlyRewards.isEmpty()}">
                     <table class="table table-borderless table-sm">
@@ -68,6 +68,7 @@
         </table>
     </div>
 </div>
+
 
 <div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
