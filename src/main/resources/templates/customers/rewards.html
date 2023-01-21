@@ -18,7 +18,7 @@
 <body>
 
 <div class="container">
-    <h1>Customer Rewards</h1>
+    <h1 class = "header">Customer Rewards</h1>
     <div th:if="${customerRewardsList.isEmpty()}" class="rp-empty-table-text">
         No customer rewards
     </div>
@@ -53,10 +53,10 @@
                         </tr>
                         </thead>
                         <tbody class="rp-tbody">
-<!--                        <tr th:each="monthlyReward : ${customerRewards.monthlyRewards}">-->
-<!--                            <td th:text="${#temporals.format(monthlyReward.getKey, 'MMMM yyyy')}">Year-Month</td>-->
-<!--                            <td th:text="${monthlyReward.getValue}">Monthly Rewards</td>-->
-<!--                        </tr>-->
+                        <tr th:each="monthlyReward : ${customerRewards.monthlyRewards}">
+                            <td th:text="${#temporals.format(monthlyReward.Key, 'MMMM yyyy')}">Year-Month</td>
+                            <td th:text="${monthlyReward.Value}">Monthly Rewards</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
